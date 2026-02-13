@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Valentine Gift for You mera bachha❤️</title>
+<style>
+body{
+    margin:0;
+    height:100vh;
+    background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:'Segoe UI',sans-serif;
+}
+.envelope{
+    width:350px;
+    height:220px;
+    background:#ff4d6d;
+    position:relative;
+    border-radius:10px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.3);
+    text-align:center;
+    color:white;
+    padding-top:50px;
+}
+.envelope::before{
+    content:'';
+    position:absolute;
+    top:-110px;
+    left:0;
+    width:0;
+    height:0;
+    border-left:175px solid transparent;
+    border-right:175px solid transparent;
+    border-bottom:110px solid #ff758f;
+}
+h1{
+    margin-bottom:20px;
+}
+.buttons button{
+    padding:12px 25px;
+    margin:10px;
+    border:none;
+    border-radius:25px;
+    font-size:18px;
+    cursor:pointer;
+}
+.yes{
+    background:#fff;
+    color:#ff4d6d;
+}
+.no{
+    background:#c9184a;
+    color:white;
+}
+.no:hover{
+    transform:translateX(40px);
+}
+</style>
+</head>
+
+<body>
+<div class="envelope">
+    <h1>💝 A Valentine Gift for my valentine💝</h1>
+    <p>Will you open this gift?</p>
+    <div class="buttons">
+        <button class="yes" onclick="openGift()">YES 💖</button>
+        <button class="no">NO 😜</button>
+    </div>
+</div>
+
+<script>
+function openGift(){
+    window.location.href="love-letter.html";
+}
+</script>
+</body>
+</html>

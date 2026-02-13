@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Valentine ❤️</title>
+
+<style>
+body{
+    margin:0;
+    overflow:hidden;
+    background:#ffdde1;
+    font-family:'Georgia',serif;
+}
+.container{
+    position:relative;
+    z-index:2;
+    max-width:800px;
+    margin:80px auto;
+    background:rgba(255,255,255,0.85);
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 20px 50px rgba(0,0,0,0.3);
+    text-align:center;
+}
+h1{
+    color:#d6336c;
+}
+.letter{
+    font-size:18px;
+    line-height:1.8;
+    color:#333;
+}
+.decor{
+    font-size:30px;
+    margin:10px 0;
+}
+img{
+    width:180px;
+    border-radius:50%;
+    border:6px solid #ff4d6d;
+    margin:20px 0;
+}
+
+/* Floating Hearts */
+.heart{
+    position:absolute;
+    bottom:-50px;
+    font-size:24px;
+    animation:float 8s infinite;
+}
+@keyframes float{
+    0%{transform:translateY(0);opacity:1;}
+    100%{transform:translateY(-800px);opacity:0;}
+}
+
+/* Fireworks */
+.firework{
+    position:absolute;
+    width:6px;
+    height:6px;
+    background:red;
+    border-radius:50%;
+    animation:explode 1.5s infinite;
+}
+@keyframes explode{
+    0%{transform:scale(1);opacity:1;}
+    100%{transform:scale(8);opacity:0;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- Music -->
+<audio autoplay loop>
+    <source src="music.mp3" type="audio/mp3">
+</audio>
+
+<div class="container">
+    <h1>💘 Happy Valentine’s Day My Love 💘</h1>
+
+    <!-- Boyfriend Photo -->
+    <img src="his-photo.jpg" alt="My Love">
+
+    <div class="decor">🌹🍫🧸🎈💋</div>
+
+    <p class="letter">
+        Rahul,My love,<br><br>
+
+        From the moment you walked into my life, everything felt warmer, brighter, and more beautiful.  
+        You are my comfort, my happiness, my safe place, and my biggest blessing.  
+        I adore your heart, your strength, your kindness, and the way you make me feel so cherished just by being you.  
+
+        I want to grow with you, dream with you, and build a life where love, laughter, and support never fade.  
+        Through every season of life, I want my hand to be in yours.  
+
+        You are my today, my tomorrow, and my always.  
+        I love you more than words can ever express. ❤️
+        <br><br>
+        Your Valentine 💞
+    </p>
+
+    <div class="decor">💐🎨💝💋</div>
+</div>
+
+<!-- Hearts Generator -->
+<script>
+for(let i=0;i<30;i++){
+    let heart=document.createElement("div");
+    heart.className="heart";
+    heart.innerHTML="❤️";
+    heart.style.left=Math.random()*100+"%";
+    heart.style.animationDuration=(5+Math.random()*5)+"s";
+    document.body.appendChild(heart);
+}
+
+/* Fireworks */
+for(let i=0;i<15;i++){
+    let f=document.createElement("div");
+    f.className="firework";
+    f.style.left=Math.random()*100+"%";
+    f.style.top=Math.random()*100+"%";
+    document.body.appendChild(f);
+}
+</script>
+
+</body>
+</html>
